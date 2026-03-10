@@ -15,7 +15,9 @@ El frontend SPA en **React + Vite** consume la API del servidor y provee una int
 
 Este repositorio es un ejemplo profesional orientado a mostrar capacidades en desarrollo de aplicaciones web complejas.
 
----
+![Captura del dashboard de médicos para buscar pacientes](./screenshot1.png)
+![Captura de un médico revisando/creando un diagnóstico](./screenshot2.png)
+![Captura del dashboard del administrados para aceptar nuestros médicos en el sistema](./screenshot3.png)
 
 ### 📑 Tabla de contenido
 
@@ -23,11 +25,9 @@ Este repositorio es un ejemplo profesional orientado a mostrar capacidades en de
 2. [Tecnologías utilizadas](#-tecnologías-utilizadas)
 3. [Arquitectura del sistema](#-arquitectura-del-sistema)
 4. [Instalación y ejecución local](#-instalación-y-ejecución-local)
-5. [Despliegue](#-despliegue) *(no aplica si no hay hosting)*  
-6. [Pruebas](#-pruebas) *(al momento no existen tests automatizados)*
-7. [Contribuir](#-contribuir)
-8. [Contacto](#-contacto)
-9. [Licencia](#-licencia)
+5. [Contribuir](#-contribuir)
+6. [Contacto](#-contacto)
+7. [Licencia](#-licencia)
 
 ---
 
@@ -126,23 +126,6 @@ npm run dev
 ```
 
 Accede a `http://localhost:5173` en tu navegador.
-
----
-
-### 📦 Despliegue
-
-*(No hay un despliegue en producción configurado. El frontend puede alojarse en Netlify/Vercel y el backend en Heroku/Render/Glitch con variables de entorno similares. Ajustar los `baseUrl` de los servicios o configurar un proxy.)*
-
----
-
-### 🧪 Pruebas
-
-Actualmente el proyecto no incluye tests automatizados.  
-Para verificar funcionalidad manualmente:
-
-1. Crear un usuario desde la interfaz de registro.
-2. Habilitarlo directamente en la colección `users` de MongoDB (campo `enabled`).
-3. Iniciar sesión y gestionar pacientes, diagnósticos y generar PDF.
 
 ---
 
