@@ -7,6 +7,7 @@ const express = require('express');
 const app = express();
 //abre las conexiones a cualquier origen
 const cors = require('cors');
+require('dotenv').config();
 
 const notFound = require('./middleware/notFound');
 const handleErrors = require('./middleware/handleErrors');
@@ -24,6 +25,9 @@ app.get('/', (request, response) => {
   response.send('<h1>Welcome to RegMed API</h1>');
 });
 
+
+
+
 //Indicamos las distintas direcciones donde la app va a buscar
 //la información (controladores)
 app.use('/api/diagnosis', diagnosisRouter);
@@ -39,6 +43,7 @@ app.use(handleErrors);
 const PORT = process.env.PORT;
 
 //Indicamos que la base de datos está funcionando
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} 🚀`);
 });

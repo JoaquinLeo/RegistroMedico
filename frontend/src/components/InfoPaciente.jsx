@@ -174,7 +174,7 @@ const InfoPaciente = ({ dni, setDni, user, setDiagnosticId }) => {
                           Comentario:
                         </CommentType>
                         <CommentData estado={item.estado_diag}>
-                          {item.init_diag}
+                          {item.comentario_diag}
                         </CommentData>
                       </CommentGroup>
                     </CommentBody>

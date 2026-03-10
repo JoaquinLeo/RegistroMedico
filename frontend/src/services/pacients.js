@@ -1,6 +1,6 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3001/api/pacients';
-//const baseUrl = 'http://192.168.1.27:3001/api/pacients'; //joa
+//const baseUrl = 'http://localhost:3001/api/pacients';
+const baseUrl = 'http://192.168.1.27:3001/api/pacients'; //joa
 //const baseUrl = 'http://192.168.1.20:3001/api/pacients'; //facu
 //const baseUrl = 'http://192.168.0.106:3001/api/pacients';// facug
 

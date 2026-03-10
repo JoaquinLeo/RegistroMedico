@@ -121,14 +121,13 @@ const DiagnosticoPaciente = ({ dni, setDni, user, diagnosticId }) => {
 
             <PersonalInfoContainer>
               <PersonalInfoHeader>
-                <PersonalInfoTitle>Comentario Inicial</PersonalInfoTitle>
+                <PersonalInfoTitle>Medico: {user.name}</PersonalInfoTitle>
               </PersonalInfoHeader>
               <PersonalInfoHeader>
-                <InitialComent>{diagnoticById.comentario_diag}</InitialComent>
+                <InitialComentUserName>Comentario Inicial: {diagnoticById.comentario_diag}</InitialComentUserName>
               </PersonalInfoHeader>
-              <PersonalInfoHeader>
-                <InitialComentUserName>{user.name}</InitialComentUserName>
-              </PersonalInfoHeader>
+
+
 
               <CommentBodyContainer>
                 {currentComments && currentComments.length === 0 ? (
@@ -154,8 +153,18 @@ const DiagnosticoPaciente = ({ dni, setDni, user, diagnosticId }) => {
                       </CommentBody>
                       <CommentBody>
                         <CommentGroup>
-                          <CommentType>estado:</CommentType>
-                          <CommentData>{item.estado_diag}</CommentData>
+                          <CommentType estado={diagnoticById.estado_diag}>
+                          Estado:
+                        </CommentType>
+                        {diagnoticById.estado_diag ? (
+                          <CommentData estado={diagnoticById.estado_diag}>
+                            Abierto
+                          </CommentData>
+                        ) : (
+                          <CommentData estado={diagnoticById.estado_diag}>
+                            Cerrado
+                          </CommentData>
+                        )}
                         </CommentGroup>
                       </CommentBody>
                       <ViewCommentBottonContainer>
@@ -164,7 +173,7 @@ const DiagnosticoPaciente = ({ dni, setDni, user, diagnosticId }) => {
                           estado={item.estado_diag}
                           onClick={() => {
                             setShowModal(true);
-                            setModalContent(<ViewComment comment={item} />);
+                            setModalContent(<ViewComment comment={item.estado} />);
                             setModalTitle('Comentario');
                           }}
                         >
